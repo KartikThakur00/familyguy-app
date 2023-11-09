@@ -18,7 +18,7 @@ export default function Character({ params }) {
       setCharacter_quotes(character_qoutes);
     }
     fetchCharacter();
-  }, []);
+  }, [params.slug]);
 
   return (
     <Container className="flex flex-col gap-5 py-5" as="main">
