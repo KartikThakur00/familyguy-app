@@ -17,7 +17,6 @@ export default function QuizQuestion({ params }) {
     }
     fetchData();
   }, [params.id]);
-  // const {question}= await getQuizQuestion(params.id)
   return (
     <Container as='main' className='flex flex-col gap-5 py-5'>
       <h1 className='text-lg font-semibold'>{question?.title}</h1>
