@@ -11,8 +11,8 @@ export default function Quiz() {
 
   useEffect(() => {
     async function fetchData() {
-      let data = await getRandomQuizQuestion();
-      setData(data);
+      let qData = await getRandomQuizQuestion();
+      setData(qData);
     }
     fetchData();
   }, []);
@@ -36,7 +36,7 @@ export default function Quiz() {
           episodes, and the show&apos;s many pop culture references.
         </p>
         <Link
-          href={`/quiz/${data?.randomQuestion}`}
+          href={`/quiz/${data}`}
           className="flex items-center justify-center gap-1 px-5 py-4 font-semibold text-orange-500 transition-colors rounded-md outline duration-600 hover:bg-orange-950"
         >
           <TbArrowBigRightFilled className="text-lg" />

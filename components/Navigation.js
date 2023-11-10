@@ -12,6 +12,7 @@ export const Navigation = () => {
       </Link>
       <Link 
       href="/quiz"
+      prefetch={false}
       className='flex items-center justify-center gap-1 px-5 font-semibold text-black transition-colors bg-green-500 rounded-md duration-500 hover:bg-green-600' 
       >
         <TbArrowBigRightFilled className='text-lg'/>

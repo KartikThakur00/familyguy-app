@@ -3,9 +3,8 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   try{
-    const random =Math.floor(Math.random()* questions.data.length)
     return NextResponse.json({
-      randomQuestion: questions.data[random].id
+      randomQuestionList: questions.data.map(d=>d.id)
     })
   }catch(error){
     return NextResponse('Internal Server Error',{status: 500})
